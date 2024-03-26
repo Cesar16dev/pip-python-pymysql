@@ -48,20 +48,20 @@ txtProd.place(x=180, y=80, width="100px")
 # Cantidad Total
 Label(ventana, text="Cantidad", font="24px").place(x=30, y=110)
 txtCantidad = Entry(ventana, border="2px")
-txtCantidad.place(x=180, y=140, width="100px")
+txtCantidad.place(x=180, y=110, width="100px")
 
 # Precio por Unidad
 Label(ventana, text="Precio X Unidad", font="24px").place(x=30, y=140)
 txtPrecu = Entry(ventana, border="2px")
-txtPrecu.place(x=180, y=110, width="100px")
+txtPrecu.place(x=180, y=140, width="100px")
 
 # Mostrando cantidad a pagar
-Label(ventana, text="Cantidad a pagar: ").place(x=40, y=220)
-lblResultado = Label(ventana, text="...")
+Label(ventana, text="Usted debe pagar: ").place(x=40, y=220)
+lblResultado = Label(ventana, text=".....")
 lblResultado.place(x=140, y=220)
 
 ### Buttons
-Button(ventana, text="Realizar compra", width=15, border="2px", command=montoTotal).place(x=30, y=180)
+Button(ventana, text="Calcular compra", width=15, border="2px", command=montoTotal).place(x=30, y=180)
 
 # Mostrar Ventana Grafica
 ventana.mainloop()
