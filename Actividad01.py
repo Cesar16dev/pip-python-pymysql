@@ -56,12 +56,12 @@ txtPrecu = Entry(ventana, border="2px")
 txtPrecu.place(x=180, y=140, width="100px")
 
 # Mostrando cantidad a pagar
-Label(ventana, text="Usted debe pagar: ").place(x=40, y=220)
-lblResultado = Label(ventana, text=".....")
-lblResultado.place(x=140, y=220)
+Label(ventana, text="Usted debe pagar: ", font="48px").place(x=40, y=250)
+lblResultado = Label(ventana, text=".....", font="48px")
+lblResultado.place(x=180, y=250)
 
 ### Buttons
-Button(ventana, text="Calcular compra", width=15, border="2px", command=montoTotal).place(x=30, y=180)
+Button(ventana, text="Calcular compra", width=15, border="2px", font="48px", bg="#fff",command=montoTotal).place(x=30, y=190)
 
 # Mostrar Ventana Grafica
 ventana.mainloop()
