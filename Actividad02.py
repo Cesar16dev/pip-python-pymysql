@@ -1,25 +1,28 @@
 ## Se desea calcular el promedio ponderado en base a los pesos porcentuales de cada curso:
-# • Examen Parcial 30%.
-# • Examen final 40%
-# • Promedio de Practicas 20%
-# • Promedio de trabajos 10%
+# • Examen Parcial (30%)
+# • Examen final (40%)
+# • Promedio de Practicas (20%)
+# • Promedio de trabajos (10%)
 
+# Importando la libreria Tkinter
 from tkinter import Tk, Entry, Label, messagebox, Button
 
+# Funcion para calcular el promedio final
 def calcular_promedio():
+    # Usando un try-except
     try:
         # Obtener los valores de los campos de texto
         parcial = float(txtParcial.get())
         final = float(txtFinal.get())
         practicas = float(txtPracticas.get())
         trabajos = float(txtTrabajos.get())
-        #Rromedio ponderado
-        promedio_ponderado = (parcial * 0.30) + (final * 0.40) + (practicas * 0.20) + (trabajos * 0.10)
-        
+        # Sacando Promedio ponderado
+        promedio_ponderado = (parcial * 0.30) + (final * 0.40) + (practicas * 0.20) + (trabajos * 0.10)        
         lblResultado["text"] = round(promedio_ponderado,1)
     
     except ValueError:
         messagebox.showerror("Error", "Por favor ingresa valores numéricos en todos los campos.")
+
 
 # Crear la ventana principal
 window = Tk()
@@ -47,9 +50,8 @@ Label(window, text="Su promedio ponderado es: ", font="48px").place(x=40, y=250)
 lblResultado = Label(window, text="...", font="48px")
 lblResultado.place(x=260, y=250)
 
-
 # Botón para calcular el promedio
 Button(window, text="Calcular Promedio", command=calcular_promedio, width="30", height="1", fg="#00f").place(x=110, y=190)
 
-# Ejecutar el bucle principal
+# Ejecutar el la ventana principal
 window.mainloop()
