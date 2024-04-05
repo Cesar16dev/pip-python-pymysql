@@ -1,7 +1,7 @@
-from tkinter import Tk, Label, Entry, Button, messagebox, ttk
+from tkinter import Tk, Label, Entry, Button, messagebox, ttk, Radiobutton, IntVar
 
 #Importamos la libreria que permite conectarnos con MySQL
-#import pymysql
+import pymysql
 
 def mostrar():
     query = "SELECT * FROM CURSOS"
@@ -77,28 +77,34 @@ ventana.geometry("700x400")
 Label(ventana, text="CONTROL DE CURSOS").place(x=200, y=20)
 
 #Labels
-Label(ventana, text="ID:").place(x=10, y=50)
+Label(ventana, text="Código:").place(x=10, y=50)
 txtID = Entry(ventana)
 txtID.place(x=10, y =75)
 
-Label(ventana, text="CURSO:").place(x=10, y=100)
+Label(ventana, text="Nombres:").place(x=10, y=100)
 txtCurso = Entry(ventana)
 txtCurso.place(x=10, y=125, width="210")
 
-Label(ventana, text="CICLO:").place(x=10, y=150)
+Label(ventana, text="Apellidos:").place(x=10, y=150)
 txtCiclo = Entry(ventana)
 txtCiclo.place(x=10, y=175, width="210")
 
-Label(ventana, text="HORAS:").place(x=10, y=200)
+Label(ventana, text="Sexo:").place(x=10, y=200)
+opcion = IntVar()
+Radiobutton(ventana, text="Masculino", value=1).place(x=10, y=220)
+Radiobutton(ventana, text="Femenino", value=2).place(x=90, y=220)
+
+Label(ventana, text="HORAS:").place(x=10, y=300)
 txtHoras = Entry(ventana)
-txtHoras.place(x=10, y=225, width="210")
+txtHoras.place(x=10, y=300, width="210")
+
+
 
 #Buttons
 Button(ventana, text="Registrar", width=8, command=registrar).place(x=10, y=270)
 Button(ventana, text="Eliminar", width=7, command=eliminar).place(x=160, y=70)
 Button(ventana, text="Modificar", width=8, command=modificar).place(x=80, y=270)
 Button(ventana, text="Nuevo", width=8, command=nuevo).place(x=150, y=270)
-
 
 #TREEVIEW
 tvCursos = ttk.Treeview(columns=("col1", "col2", "col3"))
