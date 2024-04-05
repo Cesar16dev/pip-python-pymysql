@@ -1,7 +1,7 @@
 from tkinter import Tk, Label, Entry, Button, messagebox, ttk
 
 #Importamos la libreria que permite conectarnos con MySQL
-import pymysql
+#import pymysql
 
 ventana = Tk()
 ventana.geometry("700x400")

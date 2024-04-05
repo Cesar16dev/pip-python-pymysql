@@ -10,8 +10,7 @@
 
 from tkinter import Tk, Label, Entry, Button
 
-### Funciones
-
+### Funcion para calcular el pago final con o sin descuento
 def montoTotal() :
     precio = float(txtPrecu.get())
     cantidad = float(txtCantidad.get())
@@ -60,12 +59,8 @@ Label(ventana, text="Usted debe pagar: ", font="48px").place(x=40, y=250)
 lblResultado = Label(ventana, text=".....", font="48px")
 lblResultado.place(x=180, y=250)
 
-### Buttons
+### Button que recibe la funcion montoTotal()
 Button(ventana, text="Calcular compra", width=15, border="2px", font="48px", bg="#fff",command=montoTotal).place(x=30, y=190)
 
 # Mostrar Ventana Grafica
 ventana.mainloop()
-
-
-
-
